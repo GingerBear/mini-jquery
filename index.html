@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Demo</title>
+  <script src="./jquery-mini.js"></script>
+</head>
+<body>
+  <h1>jQuery Demo</h1>
+  <ul class="list">
+    <li class="item">item 1</li>
+    <li class="item">item 1</li>
+  </ul>
+
+  <div class="container">
+    <div class="target">target</div>
+  </div>
+
+  <script>
+    $('.list .item').text('item 1 modified');
+    $('.list').children().text('item 1 modified again');
+    $('.container')
+      .find('.target')
+      .addClass('haha')
+      .text('target modified')
+      .on('click', function() {
+        alert($(this).text());
+      });
+    // $.extend()
+    // $.isFunction()
+    // $.ajax()
+
+    $('.list .item').changeText();
+    // $('div').ajax()
+  </script>
+
+</body>
+</html>
